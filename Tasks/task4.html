@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tusk_4</title>
+  </head>
+  <body>
+    <h1>Задача 13</h1>
+    <script>
+      /* На екрані виводиться меню:
+             1.Ініціалізація (сума=0)
+             2.Додати 2
+             3.Додати 3
+             4.Відняти 2
+             5.Відняти 3.
+             6.Вивести суму
+             7.Вихід.
+             Шляхом поступового вибору відповідних пунктів спробувати отримати число N, яке вводиться з клавіатури.*/
+
+      // число яке потрібно вгадати - userNumber
+
+      //1. Вводимо необхідні змінні
+      let userNumber = parseInt(prompt("Введіть ваше число"));
+      let userChoise;
+      let sum = 0;
+      do {
+        userChoise = parseInt(
+          prompt(
+            "виберіть пункт меню    1.Ініціалізація (сума=0) 2.Додати 2 3.Додати 3 4.Відняти 2 5.Відняти 3.6.Вивести суму7.Вихід."
+          )
+        );
+        switch (userChoise) {
+          case 1:
+            sum = 0;
+            break;
+          case 2:
+            sum += 2;
+            break;
+          case 3:
+            sum += 3;
+            break;
+          case 4:
+            sum -= 2;
+            break;
+          case 5:
+            sum -= 3;
+            break;
+          case 6:
+            alert(`поточна сума = ${sum}`);
+            break;
+          case 7:
+            alert("Ви вийшли");
+            break;
+
+          default:
+            alert("обран не існуючий пункт");
+            break;
+        }
+      } while (userNumber !== sum && userChoise !== 7);
+    </script>
+  </body>
+</html>

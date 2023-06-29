@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task_2</title>
+  </head>
+  <body>
+    <h1>Задача 7</h1>
+    <script>
+      //Задача 7.  В Інвестор вклав  тис. грн на 20 років під 20% річних, а потім на 17 років під 27% річних. Визначити за допомогою циклів суму, яку він одержить.
+      //1. Вводимо необхідні змінні
+      let startInvestmenAmount = parseFloat(
+        prompt("введіть суму яку хочете вкласти")
+      );
+      const firstYears = 20;
+      const firstYearlyInterest = 0.2;
+      const secondYears = 17;
+      const secondYearlyInterest = 0.27;
+      let totalProfit = startInvestmenAmount;
+      // Цикл для 20 років
+      for (let i = 0; i < firstYears; i++) {
+        const currentProfit = startInvestmenAmount * firstYearlyInterest;
+        totalProfit += currentProfit;
+      }
+      // цикл для 17 років
+      for (let j = 0; j < secondYears; j++) {
+        const currentProfit = startInvestmenAmount * secondYearlyInterest;
+        totalProfit += currentProfit;
+      }
+      document.write(`${totalProfit}`);
+    </script>
+  </body>
+</html>

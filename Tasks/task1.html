@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task_1</title>
+  </head>
+  <body>
+    <h1>Задача 1</h1>
+    <script>
+      //Задача 1. Відобразити трикутник за допомогою символів «о»
+      // Висота - height
+      //1. Вводимо необхідні змінні
+      let triangleHeight = 7;
+      //2. Будуємо цикл
+      for (let i = 0; i < triangleHeight; i++) {
+        let triangleRow = "";
+        for (let j = 0; j < i; j++) {
+          triangleRow += "o";
+        }
+        document.write(`${triangleRow}  </br>`);
+      }
+    </script>
+  </body>
+</html>
